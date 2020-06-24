@@ -31,6 +31,7 @@ class ReviewCalculator
     protected function setDefaults(): void
     {
         $this->result['count'] = 0;
+        $this->result['tally'] = [];
         $this->result['worst'] = [];
         $this->result['best'] = [];
         $this->result['score'] = 0;
@@ -60,8 +61,11 @@ class ReviewCalculator
                 $this->result['best'] = $item;
             }
 
-
-            $this->result['tally'][$item->getRating()]++;
+            if (isset($this->result['tally'][$item->getRating()])) {
+                $this->result['tally'][$item->getRating()]++;
+            } else {
+                $this->result['tally'][$item->getRating()] = 1;
+            }
         }
 
 
