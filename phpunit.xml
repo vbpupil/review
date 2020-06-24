@@ -1,31 +1,35 @@
-<phpunit
-        colors="true"
-        processIsolation="false"
-        stopOnError="false"
-        stopOnFailure="false"
-        stopOnIncomplete="false"
-        stopOnSkipped="false"
-        stopOnRisky="false"
-        beStrictAboutTestsThatDoNotTestAnything="false"
->
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
     <testsuites>
-        <testsuite name="Default">
-            <directory suffix="Test.php">./test</directory>
-        </testsuite>
+        <testsuite name="Tests">    
+            <directory>./test/src/</directory>
+        </testsuite>      
     </testsuites>
     <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./src</directory>
+        <whitelist>
+            <directory>./src</directory>
             <exclude>
-                <file>./src/Cms/Renderer/RendererInterface.php</file>
-                <file>./src/Cms/Storage/ContentInterface.php</file>
+                <directory>./tests</directory>
+                <directory>./vendor</directory>
             </exclude>
         </whitelist>
     </filter>
+
     <logging>
-        <!--<log type="coverage-html" target="build/coverage"/>-->
-        <log type="testdox-html" target="./docs/contract.html"/>
-        <!--<log type="coverage-clover" target="../docs/clover.xml"/>-->
-        <!--<log type="junit" target="build/logs/junit.xml" logIncompleteSkipped="false"/>-->
+        <log type="coverage-html" target="./Report" lowUpperBound="35" highLowerBound="70"/>
+        <!--<log type="coverage-clover" target="./Reports/coverage.xml"/>-->
+        <!--<log type="coverage-php" target="./Reports/coverage.serialized"/>-->
+        <!--<log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>-->
+        <!--<log type="junit" target="./Reports/logfile.xml"/>-->
+        <!--<log type="testdox-html" target="./Reports/testdox.html"/>-->
+        <!--<log type="testdox-text" target="./Reports/testdox.txt"/>-->
     </logging>
+
 </phpunit>

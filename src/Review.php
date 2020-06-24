@@ -16,34 +16,34 @@ namespace vbpupil\Review;
 class Review
 {
     /**
-     * @var null
+     * @var string $name
      */
-    protected $name;
+    protected ?string $name;
 
     /**
-     * @var null
+     * @var string $title
      */
-    protected $title;
+    protected ?string $title;
 
     /**
-     * @var null
+     * @var string $description
      */
-    protected $description;
+    protected ?string $description;
 
     /**
-     * @var int|string
+     * @var int $rating
      */
-    protected $rating;
+    protected int $rating = 0;
 
     /**
-     * @var int
+     * @var int $ratingMin
      */
-    protected $ratingMin = 1;
+    protected int $ratingMin = 1;
 
     /**
-     * @var int
+     * @var int $ratingMax
      */
-    protected $ratingMax = 5;
+    protected int $ratingMax = 5;
 
 
     /**
@@ -77,7 +77,7 @@ class Review
         }
 
         if ($rating < $this->ratingMin | $rating > $this->ratingMax) {
-            throw new \Exception("Minimum/Maximum value exceeded.");
+            throw new \Exception('Minimum/Maximum value exceeded.');
         }
 
         $this->rating = $rating;

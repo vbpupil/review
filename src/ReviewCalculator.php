@@ -20,9 +20,9 @@ class ReviewCalculator
 {
 
     /**
-     * @var array
+     * @var array $result
      */
-    protected $result = [];
+    protected array $result = [];
 
 
     /**

@@ -15,7 +15,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Test\\vbpupil\\": "test"
+      "Test\\vbpupil\\": "test/src"
     }
   },
   "require-dev": {
