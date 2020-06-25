@@ -1,7 +1,7 @@
 # Reviews
 
 This library allows you a convenient way to store user reviews. The library also tries to be helpful by providing quick
-access to the extreme's ie the best and the worst reviews, aswell as providing a average score rating. 
+access to the extreme's ie the best and the worst reviews, aswell as providing the average score rating. 
 
 ## How
 ```php
