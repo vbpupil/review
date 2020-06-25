@@ -11,7 +11,6 @@ declare(strict_types=1);
 
 namespace vbpupil\Review;
 
-
 use Vbpupil\Collection\Collection;
 
 class ReviewCollection extends Collection

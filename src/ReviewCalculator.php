@@ -11,8 +11,7 @@ declare(strict_types=1);
 
 namespace vbpupil\Review;
 
-
-use vbpupil\Collection\Collection;
+use Vbpupil\Collection\Collection;
 
 /**
  * Class ReviewCalculator
