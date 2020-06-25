@@ -1,3 +1,8 @@
+## Quality Assurance
+
+![PHP 7.4](https://img.shields.io/badge/PHP-7.4-blue.svg)
+[![Build Status](https://travis-ci.org/vbpupil/review.svg?branch=master)](https://travis-ci.org/vbpupil/review)
+
 # Reviews
 
 This library allows you a convenient way to store user reviews. The library also tries to be helpful by providing quick
