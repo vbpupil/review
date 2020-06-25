@@ -26,4 +26,10 @@ var_dump($rc->calculate($c));
 var_dump($rc->getBest());
 
 //6 now grab the best reviewers name
-var_dump($rc->getBest()->getName());
+echo "The best reviewer is: {$rc->getBest()->getName()}<br /><br />";
+
+//7 pull out the average star rating
+echo 'The average score rating of: '. number_format($rc->getScore(),2);
+
+//8 get the total number of reviews
+echo '<br /><br />The total number of reviews: '. $rc->getCount();

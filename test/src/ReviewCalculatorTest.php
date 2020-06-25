@@ -67,6 +67,6 @@ class ReviewCalculatorTest extends TestCase
 
     public function testGetScore()
     {
-        $this->assertEquals(2,  $this->calculator->getScore());
+        $this->assertEquals(2.8, $this->calculator->getScore());
     }
 }

@@ -7,6 +7,8 @@
  * @license: GPL V3.0+ See LICENSE.md
  */
 
+declare(strict_types=1);
+
 namespace vbpupil\Review;
 
 

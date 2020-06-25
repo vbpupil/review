@@ -7,6 +7,8 @@
  * @license: GPL V3.0+ See LICENSE.md
  */
 
+declare(strict_types=1);
+
 namespace vbpupil\Review;
 
 
@@ -111,7 +113,7 @@ class ReviewCalculator
     /**
      * @return int
      */
-    public function getScore(): int
+    public function getScore(): float
     {
         return $this->result['score'];
     }
