@@ -7,8 +7,7 @@
  * @license: GPL V3.0+ See LICENSE.md
  */
 
-namespace Test\vbpupil;
-
+namespace Test\vbpupil\Review;
 
 use PHPUnit\Framework\TestCase;
 use vbpupil\Review\Review;

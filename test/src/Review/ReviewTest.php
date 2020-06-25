@@ -7,8 +7,7 @@
  * @license: GPL V3.0+ See LICENSE.md
  */
 
-namespace Test\vbpupil;
-
+namespace Test\vbpupil\Review;
 
 use Exception;
 use PHPUnit\Framework\TestCase;
