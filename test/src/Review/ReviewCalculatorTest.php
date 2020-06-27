@@ -24,11 +24,11 @@ class ReviewCalculatorTest extends TestCase
     {
         $this->sut = new ReviewCollection();
 
-        $this->sut->addItem(new Review('John G', 'love this product', 'well what can i say its awesome', 5))
-            ->addItem(new Review('Gina', 'its okay', 'well it was all right', 4))
-            ->addItem(new Review('Adele', 'its okay, i suppose', 'meh', 2))
-            ->addItem(new Review('Christina', 'its okay, i suppose', 'meh *2', 2))
-            ->addItem(new Review('Paul', 'okay', 'okay, perhaps would not buy again', 1));
+        $this->sut->addItem(new Review('John G', 'love this product', 'well what can i say its awesome', '1999-12-28', 5))
+            ->addItem(new Review('Gina', 'its okay', 'well it was all right', '1999-12-28', 4))
+            ->addItem(new Review('Adele', 'its okay, i suppose', 'meh', '1999-12-28', 2))
+            ->addItem(new Review('Christina', 'its okay, i suppose', 'meh *2', '1999-12-28', 2))
+            ->addItem(new Review('Paul', 'okay', 'okay, perhaps would not buy again', '1999-12-28', 1));
 
         $this->calculator = new ReviewCalculator();
         $this->calculator->calculate($this->sut);

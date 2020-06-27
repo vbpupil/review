@@ -47,12 +47,18 @@ class Review
      */
     protected int $ratingMax = 5;
 
+    /**
+     * @var string $datePublished
+     */
+    protected string $datePublished;
+
 
     /**
      * Review constructor.
      * @param string $name
      * @param string $title
      * @param string $description
+     * @param string $datePublished
      * @param int $rating
      * @param int|null $min
      * @param int|null $max
@@ -62,6 +68,7 @@ class Review
         string $name,
         string $title,
         string $description,
+        string $datePublished,
         int $rating,
         ?int $min = null,
         ?int $max = null
@@ -69,6 +76,7 @@ class Review
         $this->name = $name;
         $this->title = $title;
         $this->description = $description;
+        $this->setDatePublished($datePublished);
 
         if (!is_null($min)) {
             $this->setRatingMin($min);
@@ -148,4 +156,33 @@ class Review
     {
         return $this->ratingMax;
     }
+
+    /**
+     * @return string
+     */
+    public function getDatePublished(): string
+    {
+        return $this->datePublished;
+    }
+
+    /**
+     * @param string $datePublished
+     * @throws \Exception
+     */
+    protected function setDatePublished(string $datePublished): void
+    {
+        if ($datePublished == '') {
+            $this->datePublished = date('Y-m-d');
+        }
+
+        if ($datePublished != '') {
+            if (!preg_match('~^\d{4}\-(0[1-9]|1[012])\-(0[1-9]|[12][0-9]|3[01])$~', $datePublished)) {
+                throw new \Exception('Invalid date format.');
+            }
+
+            $this->datePublished = $datePublished;
+        }
+    }
+
+
 }
