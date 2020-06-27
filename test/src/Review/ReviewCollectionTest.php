@@ -32,6 +32,7 @@ class ReviewCollectionTest extends TestCase
                 'Dean H',
                 'What an Awesome Product!',
                 'I have since bought 2 of these, they are simply the best.',
+                '1999-12-28',
                 4,
                 1,
                 5
@@ -56,6 +57,7 @@ class ReviewCollectionTest extends TestCase
                     'John S',
                     'What an Discrace!',
                     'Im returning this item imediatly.',
+                    '1999-12-28',
                     2,
                     0,
                     5
@@ -81,6 +83,7 @@ class ReviewCollectionTest extends TestCase
                     'John S',
                     'What an Discrace!',
                     'Im returning this item imediatly.',
+                    '1999-12-28',
                     2,
                     1,
                     6
