@@ -57,7 +57,7 @@ class ReviewTest extends TestCase
                 'I have since bought 2 of these, they are simply the best.',
                 '1999-12-28',
                 1,
-                1,
+                2,
                 5
             );
         } catch (Exception $e) {
@@ -91,7 +91,7 @@ class ReviewTest extends TestCase
                 'I have since bought 2 of these, they are simply the best.',
                 '1999-13-28',
                 1,
-                1,
+                2,
                 5
             );
         } catch (Exception $e) {

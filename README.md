@@ -45,4 +45,19 @@ echo 'The average score rating of: '. number_format($rc->getScore(),2);
 
 //8 get the total number of reviews
 echo '<br /><br />The total number of reviews: '. $rc->getCount();
+
+//9 loop reviews
+foreach ($c->getItems() as $r) {
+    echo <<<TXT
+    <br><br>
+Name: {$r->getName()}<br>
+Title: {$r->getTitle()}<br>
+Description: {$r->getDescription()}<br>
+Date Published: {$r->getDatePublished()}<br>
+Rating: {$r->getRating()}<br>
+Lowest Score: {$r->getRatingMax()}<br>
+Highest Score: {$r->getRatingMin()}<br><br>
+***************************************
+TXT;
+}
 ```
